@@ -1,5 +1,10 @@
 <div>test post create component</div>
-<textarea  rows="6"></textarea>
+<textarea  rows="6" [value]="newPost"></textarea>
+<!-- <textarea  rows="6" [value]="aa"></textarea> -->
+<!-- <textarea  rows="6" [value]="newPost"></textarea> -->
+<!-- value="text" -->
 <!-- horizintal line -->
 <hr>
 <button (click)="onAddPost()">Save Post</button>
+<!-- <p>{{ 1+1+'shalini'+1+1 }}</p> -->
+<p>{{ newPost }}</p>
