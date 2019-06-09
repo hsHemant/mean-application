@@ -3,12 +3,14 @@ import { Component } from '@angular/core';
 //decorator
 @Component({
     selector: 'app-post-create',
-    templateUrl: './post-create.component.html'
+    templateUrl: './post-create.component.html',
+    styleUrls: ['./post-create.component.css']
 })
 
 //class
 export class PostCreateComponent {
-    enteredValue = 'from component';
+    enteredValue = '';
+    // 'from component';
     newPost = 'NO CONTENT';
     // aa='test'
     // onAddPost(postInput: HTMLTextAreaElement){
