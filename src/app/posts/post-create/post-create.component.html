@@ -1,8 +1,11 @@
 <!-- <div>test post create component</div> -->
 
 <mat-card>
+    <mat-from-field>
+        <input matInput type="text" [(ngModel)]="enteredTitle">
+    </mat-from-field>
     <mat-form-field>
-        <textarea matInput rows="6" [(ngModel)]="enteredValue"></textarea>
+        <textarea matInput rows="6" [(ngModel)]="enteredContent"></textarea>
     </mat-form-field>
     <button
      mat-raised-button

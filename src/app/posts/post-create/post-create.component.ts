@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 //decorator
 @Component({
@@ -9,15 +9,23 @@ import { Component } from '@angular/core';
 
 //class
 export class PostCreateComponent {
-    enteredValue = '';
+    enteredTitle = "";
+    enteredContent = "";
+    @Output() postCreated = new EventEmitter();
+
     // 'from component';
-    newPost = 'NO CONTENT';
+    // newPost = 'NO CONTENT';
     // aa='test'
     // onAddPost(postInput: HTMLTextAreaElement){
         onAddPost() {
+            const post = {
+                title:this.enteredTitle,  
+                content: this.enteredContent 
+            };
+            
         // console.log(postInput);
         // console.dir(postInput);
-         this.newPost = this.enteredValue;
-    
+        //  this.newPost = this.enteredValue;
+      this.postCreated.emit(post);
     }
 }
